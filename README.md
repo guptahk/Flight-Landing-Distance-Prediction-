@@ -11,6 +11,7 @@ Data: Landing data (landing distance and other parameters) from 950 commercial f
 
 
 Variable dictionary:
+
 Aircraft: The make of an aircraft (Boeing or Airbus).
 
 Duration (in minutes): Flight duration between taking off and landing. The duration of a normal flight should always be greater than 40min.
@@ -29,33 +30,56 @@ Distance (in feet): The landing distance of an aircraft. More specifically, it r
 
 
 1st Part
+
 Initial exploration of the data
+
 Data Cleaning and further exploration
+
 Initial analysis for identifying important factors that impact the response variable “landing distance”
+
 Regression using a single factor each time
+
 Check collinearity
+
 Variable selection based on our ranking
+
 Variable selection based on automate algorithm.(AIC)
 
+
 2nd Part
+
 modeling a binary response using logistic regression.
+
 Create binary responses
+
 long.landing = 1 if distance > 2500; =0 otherwise 
+
 risky.landing = 1 if distance > 3000; =0 otherwise.
 
 Identifying important factors using the binary data of “long.landing”.
+
 Identifying important factors using the binary data of “risky.landing”.
+
 Compare the two models built for “long.landing” and “risky.landing”
+
 Compare models with different link functions
+
 Probit model
+
 Hazard model with complementary log-log link
 
 
+
 3rd Part
+
 Create a multinomial variable and attach it to the data set.
+
 Y = 1 if distance < 1000
+
 Y = 2 if 1000 < = distance < 2500
+
 Y = 3 otherwise
+
 Discard the continuous data for “distance”, and assume we are given this multinomial response only without knowing its order.
 
 What are risk factors in the landing process and how do they influence its occurrence?
@@ -63,4 +87,5 @@ What are risk factors in the landing process and how do they influence its occur
 
 
 Analysing if we have any variables in our dataset which can help us predict the number of passengers on board.
+
 Which distributuion would be used to model this variable?
